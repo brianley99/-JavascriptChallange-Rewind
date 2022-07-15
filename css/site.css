@@ -1,12 +1,18 @@
 :root {
-    --primary-color: #1d5888;
-    --secondary-color: #ff993b;
-    --dark-color: #292929;
-    --white-color: #dff3e4;
+
+    --background-color: #fef6e4;
+    --headline-color: #001858;
+
+    --primary-color: #f3d2c1;
+    --secondary-color: #8bd3dd;
+    --tertiary-color: #f582ae;
+    --dark-color: #001858;
+    --white-color: #fef6e4;
 }
 
 body {
-    color: var(--dark-color);
+    color: var(--headline-color);
+    background-color: var(--background-color);
 }
 
 nav {
@@ -26,31 +32,19 @@ footer .social>a {
 
 footer .social>a:hover {
     opacity: .9;
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
-h1,h2,h3,h4,h5,h6 {
-    color: var(--primary-color);
+h1,h2,h3,h4,h5,h6,p,a,li {
+    color: var(--headline-color);
 }
 
 .logo {
     width: 2rem;
 }
 
-.bsicon {
-    color: #8c13fd;
-}
-
-.jsicon {
-    color: #f7df1e;
-}
-
-.html5icon {
-    color: #f16529;
-}
-
-.css3icon {
-    color: #369cd6;
+.icon {
+    color: var(--secondary-color);
 }
 
 .checklist>li i {
@@ -74,4 +68,29 @@ main>.container {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@font-face {
+    font-family: barbra;
+    src: url(/css/Barbra-High.otf);
+}
+
+.text-barbra {
+    font-family: barbra;
+    letter-spacing: 1px;
+}
+
+.btn-outline-dark {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+
+.btn-outline-dark:hover {
+    color: var(--headline-color);
+    background-color: var(--tertiary-color);
+}
+
+.app-logo {
+    border-radius: 2rem;
+    background-color: var(--secondary-color);
 }
