@@ -65,16 +65,60 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        //Call Hello World
-                        function helloWorld() {
-                            alert('Hello World!');
+                        //get string from the page
+                        //controller function
+                        function getValue() {
+                        
+                            document.getElementById('alert').classList.add('invisible');
+                        
+                            let userString = document.getElementById('userString').value;
+                            
+                            let revString = reverseString(userString);
+                        
+                            displayString(revString);
+                        }
+                        
+                        //reverse the string
+                        //logic function
+                        function reverseString(userString) {
+                        
+                            let revString = [];
+                        
+                            //reverse string using a for loop
+                            for (let index = userString.length-1; index >= 0; index--) {        
+                                revString += userString[index];
+                            }
+                        
+                            return revString;
+                        }
+                        
+                        //display the reversed string to the user
+                        //view function
+                        function displayString(revString) {
+                        
+                            //write to the page
+                            document.getElementById('msg').innerHTML = `Your string reversed is: ${revString}`;
+                        
+                            //show the alert
+                            document.getElementById('alert').classList.remove('invisible');
                         }
                     </code></pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is stucured in one Function</p>
-                    <h5>Hello World!</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World!"</p>
+                    <h5>Rewind Code Explination</h5>
+                    <p>The code is structured with a high-order function getValue() being called on when the user clicks on the "Reverse Me" button.</p>
+
+                    <p>First, getValue() will retrieve the string the user input from The Document Object Model (DOM) and assign it to the variable "userString".</p>
+                        
+                    <p>Next, the function reverseString() will be called on with "userString" as its argument.</p>
+                        
+                    <p>reverseString() will use a for loop to create a new string called "revString" and assign it the letters from userString starting from the last letter and ending with the first.</p>
+                        
+                    <p>revString() will then return "revString" to getValue() and be assigned as "revString", a variable in the scope of getValue().</p>
+                        
+                    <p>Last, the displayNumbers() function is called with "revString" as its argument.</p>
+                        
+                    <p>displayNumbers() will add "revString" into the DOM inside the div named "msg",  and remove the class "invisible" from the div named "alert" to display the string reversed.</p>
                 </div>
             </div>
         </div>

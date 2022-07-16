@@ -80,6 +80,7 @@ main>.container {
     letter-spacing: 1px;
 }
 
+
 .btn-outline-dark {
     color: var(--white-color);
     background-color: var(--dark-color);
